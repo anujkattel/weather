@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Search</title>
+    <script src="https://kit.fontawesome.com/d9b4604fa2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="/">
+            <h1>Weather App</h1>
+        </a>
+        <form action="" name="form" class="form">
+            <input type="text" name="q" id="query" placeholder="Enter location to find weather" required
+                autocomplete="off">
+            <button type="button" id="searchButton" onclick="handleSearch(document.form.q.value, event)">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </form>
+    </nav>
+    <main class="container">
+        <div class="weather">
+            <div class="left">
+                <div class="location">
+                    <h3>
+                        <i class="fa-solid fa-map"></i>
+                        <span id="fulllocation">Kathmandu, Nepal</span>
+                    </h3>
+                    <p id="date"></p>
+                </div>
+                <div class="weather-details">
+                    <h1><span id="deg">22</span>&deg;C</h1>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather Icon" class="icons"
+                        id="icons">
+                    <h3 id="clouds">Partly cloudy</h3>
+                </div>
+                <div class="details">
+                    <div class="detail-item">
+                        <p>Pressure</p>
+                        <p><span id="pressure">800</span> mb</p>
+                    </div>
+                    <div class="detail-item">
+                        <p>Visibility</p>
+                        <p><span id="wind">4.3</span> km</p>
+                    </div>
+                    <div class="detail-item">
+                        <p>Humidity</p>
+                        <p><span id="humidity">82</span>%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
